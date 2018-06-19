@@ -42,6 +42,7 @@ class FormPage extends React.Component {
                         placeholder='URL' 
                         value={this.state.url} 
                         onChange={this.onUrlChange}
+                        required
                     />
                     <input 
                         style={inputStyle} 
@@ -49,6 +50,7 @@ class FormPage extends React.Component {
                         placeholder='Name'
                         value={this.state.name}
                         onChange={this.onNameChange}
+                        required
                     />
                     <button>Submit</button>
                 </form>

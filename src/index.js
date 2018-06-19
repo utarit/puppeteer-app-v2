@@ -9,8 +9,6 @@ import {addRecord} from './actions/history';
 
 const store = configureStore();
 
-store.dispatch(addRecord({url: 'Water Bill', type: 'PDF', name: '934', createdAt: moment()}));
-store.dispatch(addRecord({url: 'asdfgh', type: 'Screenshot', name: 'mert', createdAt: moment()}));
 store.dispatch(addRecord({url: 'MarcoPolo.com', type: 'PDF', name: 'deli', createdAt: moment()}));
 
 store.subscribe(() => {

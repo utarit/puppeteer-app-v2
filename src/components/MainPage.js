@@ -7,11 +7,12 @@ import {removeRecord} from '../actions/history';
 
 const MainPage = (props) => (
     <div style={divStyle}>
-        <Link to='/pdf'> Take a PDF of a Web Site </Link>
-        <Link to='/screenshot'> Take a Screenshot of a Web Site </Link>
-        <Link to='/dom'> Take a DOM of a Web Site </Link>
-
-        <div>
+        <div style={subDiv}>
+            <Link to='/pdf'> Take a PDF of a Web Site </Link>
+            <Link to='/screenshot'> Take a Screenshot of a Web Site </Link>
+            <Link to='/dom'> Take a DOM of a Web Site </Link>
+        </div>
+        <div style={subDiv}>
             {props.history.map((record)=>(
                 <div key={record.id}>
                     <h4>{record.name}</h4>
@@ -26,9 +27,15 @@ const MainPage = (props) => (
 
 const divStyle = {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     marginTop: 25
 };
+
+const subDiv = {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column'
+}
 
 const stateToProps = (state) => {
 
