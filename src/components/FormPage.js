@@ -36,15 +36,8 @@ class FormPage extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit} style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                    <input 
-                        style={inputStyle} 
-                        type='text' 
-                        placeholder='URL' 
-                        value={this.state.url} 
-                        onChange={this.onUrlChange}
-                        required
-                    />
-                    <input 
+                    <input
+                        className='text-box'
                         style={inputStyle} 
                         type='text' 
                         placeholder='Name'
@@ -52,7 +45,16 @@ class FormPage extends React.Component {
                         onChange={this.onNameChange}
                         required
                     />
-                    <button>Submit</button>
+                    <input 
+                        className='text-box'
+                        style={inputStyle} 
+                        type='text' 
+                        placeholder='URL' 
+                        value={this.state.url} 
+                        onChange={this.onUrlChange}
+                        required
+                    />
+                    <button className='form-button'>Submit</button>
                 </form>
             </div>
         );

@@ -9,7 +9,8 @@ import {addRecord} from './actions/history';
 
 const store = configureStore();
 
-store.dispatch(addRecord({url: 'MarcoPolo.com', type: 'PDF', name: 'deli', createdAt: moment()}));
+store.dispatch(addRecord({url: 'MarcoPolo.com', type: 'PDF', name: 'Lorem Ipsum', createdAt: moment()}));
+store.dispatch(addRecord({url: 'MarcoPolo.com', type: 'SS', name: 'Lirim Ipsim', createdAt: moment()}));
 
 store.subscribe(() => {
     console.log(store.getState());
